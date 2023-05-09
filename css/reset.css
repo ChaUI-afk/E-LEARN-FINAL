@@ -1,0 +1,56 @@
+:root {
+  --clr-60: hsl(210, 23%, 95%);
+  --clr-30: hsl(204, 75%, 21%);
+  --clr-10: hsl(0, 0%, 0%);
+  --clr-btn2: hsl(174, 51%, 27%);
+  --bdr-rdr: 10px;
+  --field-mrg: 1.5vh;
+
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: .5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(204, 85%, 71%);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-60);
+}
+
+@supports (scrollbar-color: hsl(204, 85%, 71%) var(--clr-60)) {
+  * {
+    scrollbar-color: hsl(204, 85%, 71%) var(--clr-60);
+    scrollbar-width: thin;
+  }
+}

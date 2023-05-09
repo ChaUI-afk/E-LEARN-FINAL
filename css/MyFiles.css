@@ -1,0 +1,156 @@
+.MyFiles {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    display: flex;
+
+}
+
+.left_side, .right_side {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+}
+
+.left_side {
+    align-items: left;
+    width: 30%;
+}
+
+.right_side {
+    box-shadow: 2px 2px 1.5px 1.5px black;
+    min-width: 300px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.left_side > h3 {
+    width: 100%;
+    font-size: clamp(1.75rem, 1.75vw + 0.5rem, 3.25rem);
+    padding: 0 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+form > h3 {
+    font-size: clamp(1rem, 1.125vw + 0.5rem, 2.5rem);
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.file_upload_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5px;
+}
+
+#fileupload {
+    display: none;
+}
+
+.add-computer-button {
+    cursor: pointer;
+    margin-top: 25px;
+    display: inline-block;
+    padding: 6px;
+    padding-right: 29px;
+    padding-left: 29px;
+    transition: all 1s ease;
+    color: darkGray;
+    text-transform: capitalize;
+    font-size: 15px;
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid var(--clr-30);
+}
+.add-computer-button:hover {
+    background-color: var(--clr-30);
+    color: white;
+}
+
+.table {
+    width: 100%;
+    font-size: 1.25rem;
+    border-collapse: separate;
+    border-spacing: 1px 5px;
+}
+
+.table td a {
+    font-size: 1.5rem;
+    color: var(--clr-30);
+    font-weight: bold;
+}
+
+.table th {
+    border-radius: 2px;
+}
+
+.table td, .table th {
+    border-bottom: 2px solid var(--clr-30);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.table th {
+    background-color: var(--clr-30);
+    color: #ffffff;
+}
+
+@media (width <= 600px) {
+    .MyFiles {
+        flex-wrap: wrap;
+    }
+    .left_side {
+        width: 100%;
+        height: 200px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+
+    }
+    .table tr {
+        margin-bottom: 15px;
+    }
+    .table td {
+        text-align: right;
+        padding: left;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 50%;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

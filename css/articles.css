@@ -1,0 +1,72 @@
+.article-container {
+    width: 100%;
+    flex-grow: 1;
+    z-index: -1;
+    padding-top: 60px;
+}
+
+.article-start {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.article-start > h2 {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    font-size: clamp(3rem, 2vw + 0.5rem, 5rem);
+    font-weight: bold;
+    padding: 10px 10px 10px 0;
+}
+
+.article-start > p {
+    width: 100%;
+    text-align: justify;
+    font-size: clamp(1.7rem, 1.25vw + .24rem, 3.5rem);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+b {
+    font-weight: bolder;
+}
+
+.article-start > .quote {
+    font-style: italic;
+}
+
+.programming-img {
+    width: 100%;
+    padding-top: 55%;
+    background: url(../img/programming-article-img.png) no-repeat  center;
+    background-size: cover;
+}
+.calculus-img {
+    width: 100%;
+    padding-top: 55%;
+    background: url(../img/calculus-article-img.png) no-repeat  center;
+    background-size: cover;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    font-size: clamp(1.7rem, 1.25vw + .24rem, 3.5rem);
+    list-style-type: circle;
+    padding: 20px;
+}
+
+
+@media (width <= 600px) {
+    .article-start {
+        padding: 10px 10px;
+    }
+}
+
